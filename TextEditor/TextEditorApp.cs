@@ -1,7 +1,7 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 namespace Program
 {
-    public class Program
+    public class TextEditorApp
     {
         public static void Main(string[] args)
         {
