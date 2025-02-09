@@ -6,9 +6,10 @@ using System.Threading.Tasks;
 
 namespace TextEditor.Business.Interfaces
 {
-    public interface ICommander
+    public interface ITextEditor
     {
-        void Execute();
-        void Unexecute();
+        public void AppendText(string text);
+        public void removeText(int length);
+        public string getText();
     }
 }

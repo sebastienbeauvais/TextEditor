@@ -1,4 +1,7 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
+using TextEditor.Business.Interfaces;
+using TextEditor.Business;
+
 namespace Program
 {
     public class TextEditorApp
@@ -7,7 +10,7 @@ namespace Program
         {
             var serviceProvider = ConfigureServices();
 
-            var textEditor = serviceProvider.GetRequiredService<TextEditor.GUI.TextEditor>();
+            var textEditor = serviceProvider.GetRequiredService<TextEditor.GUI.MenuUi>();
 
             textEditor.StartApp();
         }
@@ -17,7 +20,8 @@ namespace Program
             var services = new ServiceCollection();
 
             // Register services
-            services.AddScoped<TextEditor.GUI.TextEditor, TextEditor.GUI.TextEditor>();
+            services.AddScoped<TextEditor.GUI.MenuUi, TextEditor.GUI.MenuUi>();
+            services.AddScoped<ITextEditor, TextEditor.Business.TextEditor>();
 
 
             return services.BuildServiceProvider();
