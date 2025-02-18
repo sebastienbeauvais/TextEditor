@@ -3,16 +3,16 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using TextEditor.Business.Interfaces;
-using TextEditor.Business;
+using Editor.Business.Interfaces;
+using Editor.Business;
 
-namespace TextEditor.GUI
+namespace Editor.GUI
 {
     public class MenuUi
     {
         public void StartApp()
         {
-            ITextEditor textEditor = new Business.TextEditor();
+            ITextEditor textEditor = new TextEditor();
             var invoker = new CommandInvoker();
             bool exit = false;
 

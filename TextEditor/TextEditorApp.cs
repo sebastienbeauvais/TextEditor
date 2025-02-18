@@ -1,6 +1,6 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
-using TextEditor.Business.Interfaces;
-using TextEditor.Business;
+using Editor.Business.Interfaces;
+using Editor.Business;
 
 namespace Program
 {
@@ -10,7 +10,7 @@ namespace Program
         {
             var serviceProvider = ConfigureServices();
 
-            var textEditor = serviceProvider.GetRequiredService<TextEditor.GUI.MenuUi>();
+            var textEditor = serviceProvider.GetRequiredService<Editor.GUI.MenuUi>();
 
             textEditor.StartApp();
         }
@@ -20,8 +20,8 @@ namespace Program
             var services = new ServiceCollection();
 
             // Register services
-            services.AddScoped<TextEditor.GUI.MenuUi, TextEditor.GUI.MenuUi>();
-            services.AddScoped<ITextEditor, TextEditor.Business.TextEditor>();
+            services.AddScoped<Editor.GUI.MenuUi, Editor.GUI.MenuUi>();
+            services.AddScoped<ITextEditor, TextEditor>();
 
 
             return services.BuildServiceProvider();

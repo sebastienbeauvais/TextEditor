@@ -1,7 +1,7 @@
-﻿using TextEditor.Business.Interfaces;
+﻿using Editor.Business.Interfaces;
 
 
-namespace TextEditor.Business
+namespace Editor.Business
 {
     public class DeleteTextCommand : ICommander
     {

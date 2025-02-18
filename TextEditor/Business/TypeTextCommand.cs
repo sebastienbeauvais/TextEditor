@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using TextEditor.Business.Interfaces;
+using Editor.Business.Interfaces;
 
 
-namespace TextEditor.Business
+namespace Editor.Business
 {
     public class TypeTextCommand : ICommander
     {
