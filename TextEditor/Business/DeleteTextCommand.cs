@@ -16,11 +16,11 @@ namespace Editor.Business
         public int LengthToDelete { get; }
         public void Execute()
         {
-            var currentText = _editor.getText();
+            var currentText = _editor.GetText();
             if (LengthToDelete <= currentText.Length)
             {
                 _deleteText = currentText.Substring(currentText.Length - LengthToDelete);
-                _editor.removeText(LengthToDelete);
+                _editor.RemoveText(LengthToDelete);
             }
         }
         public void Unexecute()

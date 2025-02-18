@@ -56,7 +56,7 @@ namespace Editor.GUI
                         invoker.Redo();
                         break;
                     case "5":
-                        Console.WriteLine("Current text: \n" + textEditor.getText());
+                        Console.WriteLine("Current text: \n" + textEditor.GetText());
                         break;
                     case "6":
                         exit = true;

@@ -10,14 +10,14 @@ namespace Editor.Business
         {
             _text += text;
         }
-        public void removeText(int length)
+        public void RemoveText(int length)
         {
             if (length <= _text.Length)
             {
                 _text = _text.Substring(0, _text.Length - length);
             }
         }
-        public string getText()
+        public string GetText()
         {
             return _text;
         }

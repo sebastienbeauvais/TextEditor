@@ -24,7 +24,7 @@ namespace Editor.Business
         }
         public void Unexecute()
         {
-            _editor.removeText(_textToType.Length);
+            _editor.RemoveText(_textToType.Length);
         }
     }
 }
