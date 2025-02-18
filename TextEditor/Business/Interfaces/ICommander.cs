@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TextEditor.Business.Interfaces
+namespace Editor.Business.Interfaces
 {
     public interface ICommander
     {
