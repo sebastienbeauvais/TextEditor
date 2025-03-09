@@ -3,7 +3,7 @@
 
 namespace Editor.Business
 {
-    public class DeleteTextCommand : ICommander
+    public class DeleteTextCommand : ICommand
     {
         private readonly ITextEditor _editor;
         private string _deleteText = string.Empty;

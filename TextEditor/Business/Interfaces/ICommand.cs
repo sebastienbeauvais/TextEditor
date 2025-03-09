@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Editor.Business.Interfaces
 {
-    public interface ICommander
+    public interface ICommand
     {
         void Execute();
         void Unexecute();

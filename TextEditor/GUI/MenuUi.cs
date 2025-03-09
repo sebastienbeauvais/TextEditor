@@ -24,7 +24,8 @@ namespace Editor.GUI
                 Console.WriteLine("3. Undo");
                 Console.WriteLine("4. Redo");
                 Console.WriteLine("5. View Text");
-                Console.WriteLine("6. Exit");
+                Console.WriteLine("6. Flip Text");
+                Console.WriteLine("99. Exit");
 
                 Console.Write("Choose an option: ");
                 var input = Console.ReadLine();
@@ -59,6 +60,12 @@ namespace Editor.GUI
                         Console.WriteLine("Current text: \n" + textEditor.GetText());
                         break;
                     case "6":
+                        Console.WriteLine("Text before flipping: " + textEditor.GetText());
+                        var flipCommand = new FlipTextCommand(textEditor, textEditor.GetText());
+                        invoker.ExecuteCommand(flipCommand);
+                        Console.WriteLine("Flipped text: " + textEditor.GetText());
+                        break;
+                    case "99":
                         exit = true;
                         break;
                     default:

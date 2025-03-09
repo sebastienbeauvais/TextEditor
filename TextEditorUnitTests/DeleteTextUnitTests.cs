@@ -21,7 +21,7 @@ namespace EditorUnitTests.DeleteText
             var editorMock = new Mock<ITextEditor>();
             var mockTypeTextCommand = new Mock<TypeTextCommand>(editorMock.Object, text);
 
-            ICommander commander = new DeleteTextCommand(editorMock.Object, text.Length);
+            ICommand commander = new DeleteTextCommand(editorMock.Object, text.Length);
 
             editorMock.Setup(x => x.GetText()).Returns(text);
             commander.Execute();
@@ -35,7 +35,7 @@ namespace EditorUnitTests.DeleteText
             var editorMock = new Mock<ITextEditor>();
             var mockTypeTextCommand = new Mock<TypeTextCommand>(editorMock.Object, text);
 
-            ICommander commander = new DeleteTextCommand(editorMock.Object, text.Length);
+            ICommand commander = new DeleteTextCommand(editorMock.Object, text.Length);
 
             editorMock.Setup(x => x.GetText()).Returns(text);
             commander.Execute();
@@ -49,7 +49,7 @@ namespace EditorUnitTests.DeleteText
             var editorMock = new Mock<ITextEditor>();
             var mockTypeTextCommand = new Mock<TypeTextCommand>(editorMock.Object, text);
 
-            ICommander commander = new DeleteTextCommand(editorMock.Object, text.Length);
+            ICommand commander = new DeleteTextCommand(editorMock.Object, text.Length);
 
             editorMock.Setup(x => x.GetText()).Returns(text);
             commander.Execute();

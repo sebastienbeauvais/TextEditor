@@ -11,6 +11,7 @@ namespace Editor.Business.Interfaces
         public void AppendText(string text);
         public void RemoveText(int length);
         public string GetText();
+        public void FlipText();
     }
   
 }

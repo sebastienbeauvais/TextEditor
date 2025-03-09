@@ -8,7 +8,7 @@ using Editor.Business.Interfaces;
 
 namespace Editor.Business
 {
-    public class TypeTextCommand : ICommander
+    public class TypeTextCommand : ICommand
     {
         private readonly ITextEditor _editor;
         private readonly string _textToType;

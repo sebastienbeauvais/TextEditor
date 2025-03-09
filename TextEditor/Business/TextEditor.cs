@@ -21,6 +21,13 @@ namespace Editor.Business
         {
             return _text;
         }
+
+        public void FlipText()
+        {
+            char[] charArray = _text.ToCharArray();
+            Array.Reverse(charArray);
+            _text = new string(charArray);
+        }
     }
 
 }
