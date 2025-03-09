@@ -9,7 +9,9 @@ namespace Editor.Business.Interfaces
     public interface ITextEditor
     {
         public void AppendText(string text);
-        public void removeText(int length);
-        public string getText();
+        public void RemoveText(int length);
+        public string GetText();
+        public void FlipText();
     }
+  
 }

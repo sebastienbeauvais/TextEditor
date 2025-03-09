@@ -8,7 +8,7 @@ using Editor.Business.Interfaces;
 
 namespace Editor.Business
 {
-    public class TypeTextCommand : ICommander
+    public class TypeTextCommand : ICommand
     {
         private readonly ITextEditor _editor;
         private readonly string _textToType;
@@ -24,7 +24,7 @@ namespace Editor.Business
         }
         public void Unexecute()
         {
-            _editor.removeText(_textToType.Length);
+            _editor.RemoveText(_textToType.Length);
         }
     }
 }

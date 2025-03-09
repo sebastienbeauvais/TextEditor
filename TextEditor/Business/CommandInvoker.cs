@@ -10,10 +10,10 @@ namespace Editor.Business
 {
     public class CommandInvoker
     {
-        private readonly Stack<ICommander> _undoStack = new();
-        private readonly Stack<ICommander> _redoStack = new();
+        private readonly Stack<Interfaces.ICommand> _undoStack = new();
+        private readonly Stack<Interfaces.ICommand> _redoStack = new();
 
-        public void ExecuteCommand(ICommander command)
+        public void ExecuteCommand(Interfaces.ICommand command)
         {
             command.Execute();
             _undoStack.Push(command);
