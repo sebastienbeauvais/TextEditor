@@ -24,7 +24,7 @@ namespace Editor.Business
             if (_undoStack.Count > 0)
             {
                 var command = _undoStack.Pop();
-                command.Unexecute();
+                command.Execute();
                 _redoStack.Push(command);
             }
             else

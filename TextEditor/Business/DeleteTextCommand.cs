@@ -23,9 +23,5 @@ namespace Editor.Business
                 _editor.RemoveText(LengthToDelete);
             }
         }
-        public void Unexecute()
-        {
-            _editor.AppendText(_deleteText);
-        }
     }
 }

@@ -22,9 +22,5 @@ namespace Editor.Business
         {
             _editor.AppendText(_textToType);
         }
-        public void Unexecute()
-        {
-            _editor.RemoveText(_textToType.Length);
-        }
     }
 }

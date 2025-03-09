@@ -36,14 +36,14 @@ namespace Editor.GUI
                         Console.Write("Enter text to write: ");
                         string text = Console.ReadLine();
                         var typeCommand = new TypeTextCommand(textEditor, text);
-                        invoker.ExecuteCommand(typeCommand);
+                        invoker.ExecuteCommand((ICommand)typeCommand);
                         break;
                     case "2":
                         Console.WriteLine("Enter number of characters to delete: ");
                         if(int.TryParse(Console.ReadLine(), out int deleteLength))
                         {
                             var deleteCommand = new DeleteTextCommand(textEditor, deleteLength);
-                            invoker.ExecuteCommand(deleteCommand);
+                            invoker.ExecuteCommand((ICommand)deleteCommand);
                         }
                         else
                         {

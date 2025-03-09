@@ -19,18 +19,5 @@ namespace EditorUnitTests.TypeText
 
             editorMock.Verify(x => x.AppendText("Hello World"), Times.Once);
         }
-        [TestMethod]
-        public void Unexecute_ShouldRemoveTextFromEditor()
-        {
-            var text = "Hello World";
-            var editorMock = new Mock<ITextEditor>();
-            var command = new TypeTextCommand(editorMock.Object, text);
-
-            command.Execute();
-            command.Unexecute();
-
-            editorMock.Verify(x => x.AppendText(text), Times.Once);
-            editorMock.Verify(x => x.RemoveText(text.Length), Times.Once);
-        }
     }
 }

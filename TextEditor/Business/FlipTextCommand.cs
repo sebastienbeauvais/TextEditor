@@ -21,10 +21,5 @@ namespace Editor.Business
         {
             _editor.FlipText();
         }
-        public void Unexecute()
-        {
-            //TODO
-            _editor.FlipText();
-        }
     }
 }

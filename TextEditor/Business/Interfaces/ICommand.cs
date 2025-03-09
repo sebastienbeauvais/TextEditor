@@ -9,6 +9,5 @@ namespace Editor.Business.Interfaces
     public interface ICommand
     {
         void Execute();
-        void Unexecute();
     }
 }

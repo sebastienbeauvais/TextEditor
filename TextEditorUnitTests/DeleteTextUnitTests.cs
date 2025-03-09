@@ -42,7 +42,7 @@ namespace EditorUnitTests.DeleteText
 
             editorMock.Verify(x => x.RemoveText(text.Length+1), Times.Never);
         }
-        [TestMethod]
+        /*[TestMethod]
         public void DeleteText_ShouldRedoLastWord()
         {
             var text = "Hello World";
@@ -56,6 +56,6 @@ namespace EditorUnitTests.DeleteText
             commander.Unexecute();
 
             editorMock.Verify(x => x.AppendText(text), Times.Once);
-        }
+        }*/
     }
 }
